@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="Stencil">
+  <template name="cc" value="connectedCallback(): void {&#10;  $END$&#10;}" description="connectedCallback" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="cdl" value="componentDidLoad(): void {&#10;  $END$&#10;}" description="componentDidLoad" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="cdr" value="componentDidRender(): void {&#10;  $END$&#10;}" description="componentDidRender" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="cdu" value="componentDidUpdate(): void {&#10;  $END$ &#10;}" description="componentDidUpdate" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="compts" value="import { Component, h } from &quot;@stencil/core&quot;;&#10;&#10;@Component({&#10;  tag: &quot;$COMPONENT_TAG$&quot;,&#10;  styleUrl: &quot;$COMPONENT_TAG$.scss&quot;,&#10;  shadow: true&#10;})&#10;export class $CLASS$ {&#10;  render() {&#10;    return $BASE_VNODE$$END$;&#10;  }&#10;}" description="Creates base component" toReformat="false" toShortenFQNames="true">
+    <variable name="COMPONENT_TAG" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="false" />
+    <variable name="CLASS" expression="capitalize(camelCase(fileNameWithoutExtension()))" defaultValue="" alwaysStopAt="false" />
+    <variable name="BASE_VNODE" expression="" defaultValue="&quot;&lt;div /&gt;&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="cwl" value="componentWillLoad(): $RETURN_TYPE$ {&#10;  $END$&#10;}" description="componentWillLoad" toReformat="false" toShortenFQNames="true">
+    <variable name="RETURN_TYPE" expression="" defaultValue="&quot;void&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="cwr" value="componentWillRender(): $RETURN_TYPE$ {&#10;  $END$&#10;}" description="componentWillRender" toReformat="false" toShortenFQNames="true">
+    <variable name="RETURN_TYPE" expression="" defaultValue="&quot;void&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="cwu" value="componentWillUpdate(): $RETURN_TYPE$ {&#10;  $END$&#10;}" description="componentWillUpdate" toReformat="false" toShortenFQNames="true">
+    <variable name="RETURN_TYPE" expression="" defaultValue="&quot;void&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="dc" value="disconnectedCallback(): void {&#10;  $END$&#10;}" description="disconnectedCallback" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="el" value="@Element()&#10;el: HTMLElement;" description="Adds element property" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="ev" value="@Event($PROPS$)&#10;$EMITTER_NAME$: EventEmitter;$END$" description="Adds event emitter" toReformat="false" toShortenFQNames="true">
+    <variable name="PROPS" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="EMITTER_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="ls" value="@Listen(&quot;$EVENT_NAME$&quot;$EVENT_PROPS$)&#10;$EVENT_LISTENER_NAME$(): void {&#10;  $END$&#10;}" description="Adds event listener" toReformat="false" toShortenFQNames="true">
+    <variable name="EVENT_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="EVENT_PROPS" expression="" defaultValue="&quot;, {}&quot;" alwaysStopAt="true" />
+    <variable name="EVENT_LISTENER_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="mtd" value="@Method()&#10;async $METHOD_NAME$: Promise&lt;$RETURN_TYPE$&gt; {&#10;  $END$&#10;}" description="Adds public method" toReformat="false" toShortenFQNames="true">
+    <variable name="METHOD_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="RETURN_TYPE" expression="" defaultValue="&quot;void&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="prop" value="@Prop($PROP_OPTIONS$)&#10;$PROP_NAME$: $TYPE$$END$;" description="Adds property" toReformat="false" toShortenFQNames="true">
+    <variable name="PROP_OPTIONS" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PROP_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="st" value="@State()&#10;$STATE_PROP$: $TYPE$$END$;" description="Adds state property" toReformat="false" toShortenFQNames="true">
+    <variable name="STATE_PROP" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="wat" value="@Watch(&quot;$PROP_NAME$&quot;)&#10;$WATCHER_NAME$(): void {&#10;  $END$&#10;}" description="Adds watcher" toReformat="false" toShortenFQNames="true">
+    <variable name="PROP_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="WATCHER_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+</templateSet>
